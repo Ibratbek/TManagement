@@ -13,5 +13,5 @@ export default container.register({
   mongoDB: asClass(MongoDBDriver),
   httpServer: asClass(HttpServer).singleton(),
   application: asClass(Application).singleton(),
-  config: asValue(Config),
+  config: asValue(Config)
 });

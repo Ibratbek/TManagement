@@ -3,17 +3,17 @@ import { Color } from '../../../domain/entities/Color';
 
 const colorSchema = new Schema<Color>(
   {
-    name: String,
+    name: String
   },
   {
     versionKey: false,
     timestamps: true,
     toObject: {
-      virtuals: true,
+      virtuals: true
     },
     toJSON: {
-      virtuals: true,
-    },
+      virtuals: true
+    }
   }
 );
 

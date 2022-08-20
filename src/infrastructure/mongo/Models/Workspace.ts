@@ -6,23 +6,23 @@ const workSpaceSchema = new Schema<WorkSpace>(
     name: String,
     color: {
       type: Schema.Types.ObjectId,
-      ref: 'Color',
+      ref: 'Color'
     },
     workersCount: Number,
     user: {
       type: Schema.Types.ObjectId,
-      ref: 'User',
-    },
+      ref: 'User'
+    }
   },
   {
     versionKey: false,
     timestamps: true,
     toObject: {
-      virtuals: true,
+      virtuals: true
     },
     toJSON: {
-      virtuals: true,
-    },
+      virtuals: true
+    }
   }
 );
 

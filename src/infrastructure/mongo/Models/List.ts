@@ -6,26 +6,26 @@ const listSchema = new Schema<List>(
     name: String,
     space: {
       type: Schema.Types.ObjectId,
-      ref: 'Space',
+      ref: 'Space'
     },
     isArchive: {
       type: Boolean,
-      default: false,
+      default: false
     },
     folder: {
       type: Schema.Types.ObjectId,
-      ref: 'Folder',
-    },
+      ref: 'Folder'
+    }
   },
   {
     versionKey: false,
     timestamps: true,
     toObject: {
-      virtuals: true,
+      virtuals: true
     },
     toJSON: {
-      virtuals: true,
-    },
+      virtuals: true
+    }
   }
 );
 

@@ -6,26 +6,26 @@ const columnSchema = new Schema<Column>(
     name: String,
     space: {
       type: Schema.Types.ObjectId,
-      ref: 'Space',
+      ref: 'Space'
     },
     color: {
       type: Schema.Types.ObjectId,
-      ref: 'Color',
+      ref: 'Color'
     },
     isArchive: {
       type: Boolean,
-      default: false,
-    },
+      default: false
+    }
   },
   {
     versionKey: false,
     timestamps: true,
     toObject: {
-      virtuals: true,
+      virtuals: true
     },
     toJSON: {
-      virtuals: true,
-    },
+      virtuals: true
+    }
   }
 );
 

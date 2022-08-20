@@ -6,7 +6,7 @@ const taskSchema = new Schema<Task>(
     name: String,
     column: {
       type: Schema.Types.ObjectId,
-      ref: 'Column',
+      ref: 'Column'
     },
     description: String,
     dueDate: Date,
@@ -14,35 +14,35 @@ const taskSchema = new Schema<Task>(
     priority: {
       type: String,
       enum: ['Urgent', 'High', 'Normal', 'Low', 'None'],
-      default: 'None',
+      default: 'None'
     },
     files: [String],
     assigners: [
       {
         type: Schema.Types.ObjectId,
-        ref: 'User',
-      },
+        ref: 'User'
+      }
     ],
     comments: [
       {
         type: Schema.Types.ObjectId,
-        ref: 'Comment',
-      },
+        ref: 'Comment'
+      }
     ],
     isArchive: {
       type: Boolean,
-      default: false,
-    },
+      default: false
+    }
   },
   {
     versionKey: false,
     timestamps: true,
     toObject: {
-      virtuals: true,
+      virtuals: true
     },
     toJSON: {
-      virtuals: true,
-    },
+      virtuals: true
+    }
   }
 );
 

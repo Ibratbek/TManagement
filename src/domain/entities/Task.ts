@@ -10,10 +10,10 @@ export type Task = {
   assigners: [User];
   priority: string; // enum ['Urgent','High','Normal','Low','None']
   dueDate?: Date;
-  estimateTime?: Number;
+  estimateTime?: number;
   comments: [Comment];
   files?: [string];
-  isArchive: Boolean;
+  isArchive: boolean;
   createdAt: Date;
   updatedAt: Date;
 };

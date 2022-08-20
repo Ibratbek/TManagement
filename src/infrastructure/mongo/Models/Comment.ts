@@ -6,29 +6,29 @@ const commentSchema = new Schema<Comment>(
     content: String,
     task: {
       type: Schema.Types.ObjectId,
-      ref: 'Task',
+      ref: 'Task'
     },
     parentComment: {
       type: Schema.Types.ObjectId,
-      ref: 'Comment',
+      ref: 'Comment'
     },
     files: [String],
     assigners: [
       {
         type: Schema.Types.ObjectId,
-        ref: 'User',
-      },
-    ],
+        ref: 'User'
+      }
+    ]
   },
   {
     versionKey: false,
     timestamps: true,
     toObject: {
-      virtuals: true,
+      virtuals: true
     },
     toJSON: {
-      virtuals: true,
-    },
+      virtuals: true
+    }
   }
 );
 

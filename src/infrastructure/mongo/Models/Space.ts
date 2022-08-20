@@ -6,31 +6,31 @@ const spaceSchema = new Schema<Space>(
     name: String,
     color: {
       type: Schema.Types.ObjectId,
-      ref: 'Color',
+      ref: 'Color'
     },
     type: {
       type: String,
       enum: ['private', 'public'],
-      default: 'public',
+      default: 'public'
     },
     workSpace: {
       type: Schema.Types.ObjectId,
-      ref: 'WorkSpace',
+      ref: 'WorkSpace'
     },
     isArchive: {
       type: Boolean,
-      default: false,
-    },
+      default: false
+    }
   },
   {
     versionKey: false,
     timestamps: true,
     toObject: {
-      virtuals: true,
+      virtuals: true
     },
     toJSON: {
-      virtuals: true,
-    },
+      virtuals: true
+    }
   }
 );
 
