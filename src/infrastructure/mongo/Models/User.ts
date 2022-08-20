@@ -6,24 +6,24 @@ const userSchema = new Schema<User>(
     fullName: String,
     email: {
       type: String,
-      required: true,
+      required: true
     },
     password: String,
     verified: {
       type: Boolean,
-      default: false,
+      default: false
     },
-    verificationCode: String,
+    verificationCode: String
   },
   {
     versionKey: false,
     timestamps: true,
     toObject: {
-      virtuals: true,
+      virtuals: true
     },
     toJSON: {
-      virtuals: true,
-    },
+      virtuals: true
+    }
   }
 );
 

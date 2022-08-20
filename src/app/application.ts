@@ -15,8 +15,6 @@ export class Application {
   }
 
   start = () => {
-    return Promise.resolve()
-      .then(this.mongoDB.connect)
-      .then(this.httpServer.start);
+    return Promise.resolve().then(this.mongoDB.connect).then(this.httpServer.start);
   };
 }

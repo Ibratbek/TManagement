@@ -5,7 +5,7 @@ export type List = {
   id: string;
   name: string;
   space: Space;
-  isArchive: Boolean;
+  isArchive: boolean;
   folder?: Folder;
   createdAt: Date;
   updatedAt: Date;

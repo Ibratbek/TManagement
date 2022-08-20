@@ -6,30 +6,30 @@ const folderSchema = new Schema<Folder>(
     name: String,
     color: {
       type: Schema.Types.ObjectId,
-      ref: 'Color',
+      ref: 'Color'
     },
     parentFoler: {
       type: Schema.Types.ObjectId,
-      ref: 'Folder',
+      ref: 'Folder'
     },
     space: {
       type: Schema.Types.ObjectId,
-      ref: 'Space',
+      ref: 'Space'
     },
     isArchive: {
       type: Boolean,
-      default: false,
-    },
+      default: false
+    }
   },
   {
     versionKey: false,
     timestamps: true,
     toObject: {
-      virtuals: true,
+      virtuals: true
     },
     toJSON: {
-      virtuals: true,
-    },
+      virtuals: true
+    }
   }
 );
 

@@ -7,7 +7,7 @@ export type Space = {
   color: Color;
   type: string;
   workSpace: WorkSpace;
-  isArchive: Boolean;
+  isArchive: boolean;
   createdAt: Date;
   updatedAt: Date;
 };
